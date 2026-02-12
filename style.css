@@ -1,13 +1,5 @@
-/* Import a clean, modern font */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-
-:root {
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-    --dark-slate: #0f172a;
-    --light-text: #64748b;
-    --bg-color: #f1f5f9;
-}
+/* Clean, professional font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
 * {
     margin: 0;
@@ -16,166 +8,121 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--dark-slate);
-    line-height: 1.7;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
 }
 
-/* 1. GLASSMORPHISM NAVIGATION */
+/* 1. Minimal Navigation */
 nav {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-    padding: 1.2rem 0;
+    padding: 2rem 0;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 0 2rem;
 }
 
 .logo {
-    font-weight: 800;
-    font-size: 1.5rem;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 700;
     text-decoration: none;
+    color: #000;
+    letter-spacing: -1px;
+    font-size: 1.2rem;
 }
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     list-style: none;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--dark-slate);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: 0.3s;
+    color: #666;
+    font-size: 0.9rem;
+    transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    color: #6366f1;
+    color: #000;
 }
 
-/* 2. MODERN HERO SECTION */
+/* 2. Stark Hero Section */
 .hero {
-    background: white;
-    padding: 120px 20px;
-    text-align: center;
-    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-    background-size: 30px 30px; /* Subtle grid background */
-}
-
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: -2px;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    color: var(--light-text);
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-}
-
-/* 3. PROFESSIONAL CARDS */
-.container {
-    max-width: 1100px;
-    margin: -60px auto 60px; /* Pulls cards up into the hero slightly */
+    max-width: 1000px;
+    margin: 80px auto;
     padding: 0 2rem;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    border: 1px solid #f1f5f9;
-    transition: all 0.4s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
-    border-color: #6366f1;
-}
-
-.card h3 {
-    margin: 1rem 0;
-    font-size: 1.4rem;
-}
-
-/* 4. BUTTONS & TAGS */
-.btn {
-    background: var(--primary-gradient);
-    color: white;
-    padding: 14px 28px;
-    border-radius: 12px;
-    text-decoration: none;
+.hero h1 {
+    font-size: 3.5rem;
     font-weight: 700;
-    display: inline-block;
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
-    transition: 0.3s;
+    margin-bottom: 1rem;
+    color: #000;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 25px rgba(99, 102, 241, 0.3);
+.hero p {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 600px;
 }
 
-.badge {
-    background: #eef2ff;
-    color: #4f46e5;
-    padding: 6px 14px;
-    border-radius: 100px;
-    font-size: 0.75rem;
-    font-weight: 700;
+/* 3. Clean Project List (No boxes, just clean rows) */
+.container {
+    max-width: 1000px;
+    margin: 0 auto 100px;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 0.8rem;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 2rem;
+    display: block;
+}
 
-    /* Icon Header in Cards */
-.card-icon-header {
-    font-size: 2.5rem; /* Makes icons large */
-    margin-bottom: 1.5rem;
+.project-row {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    transition: background 0.2s;
 }
 
-.card-icon-header i {
-    transition: transform 0.3s ease;
+.project-row:hover {
+    background: #fafafa;
 }
 
-.card:hover .card-icon-header i {
-    transform: scale(1.15); /* Icons "pop" when you hover over the card */
+.project-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Specific styling for the badge to make it look cleaner */
-.badge {
-    display: inline-block;
-    background: #f1f5f9;
-    padding: 5px 12px;
-    border-radius: 50px;
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
-    margin-bottom: 10px;
+.project-info p {
+    color: #666;
+    max-width: 500px;
 }
+
+.project-tech {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #0070f3; /* Clear, professional blue */
+    margin-top: 10px;
+}
+
+.view-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #000;
 }
