@@ -1,60 +1,154 @@
-/* If this works, your header will turn DARK BLUE */
+/* Import a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --dark-slate: #0f172a;
+    --light-text: #64748b;
+    --bg-color: #f1f5f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: #f0f2f5; /* Light grey background */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark-slate);
+    line-height: 1.7;
 }
 
+/* 1. GLASSMORPHISM NAVIGATION */
 nav {
-    background-color: #1e293b; /* Dark Slate */
-    padding: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    padding: 1.2rem 0;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-nav a {
-    color: white;
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
 }
 
-nav a:hover {
-    color: #3b82f6; /* Bright Blue on hover */
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
 }
 
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-slate);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6366f1;
+}
+
+/* 2. MODERN HERO SECTION */
 .hero {
-    background-color: #ffffff;
+    background: white;
+    padding: 120px 20px;
     text-align: center;
-    padding: 80px 20px;
-    border-bottom: 5px solid #3b82f6;
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 30px 30px; /* Subtle grid background */
 }
 
-h1 {
-    color: #1e293b;
-    font-size: 3rem;
-    margin: 0;
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
 }
 
+.hero p {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+/* 3. PROFESSIONAL CARDS */
 .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 1100px;
+    margin: -60px auto 60px; /* Pulls cards up into the hero slightly */
+    padding: 0 2rem;
 }
 
-/* Card Styling for Projects/Certs */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-top: 4px solid #3b82f6;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f1f5f9;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+    border-color: #6366f1;
+}
+
+.card h3 {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+
+/* 4. BUTTONS & TAGS */
+.btn {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px rgba(99, 102, 241, 0.3);
+}
+
+.badge {
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
