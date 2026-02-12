@@ -151,4 +151,31 @@ nav {
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    /* Icon Header in Cards */
+.card-icon-header {
+    font-size: 2.5rem; /* Makes icons large */
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 15px;
+}
+
+.card-icon-header i {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-icon-header i {
+    transform: scale(1.15); /* Icons "pop" when you hover over the card */
+}
+
+/* Specific styling for the badge to make it look cleaner */
+.badge {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
 }
