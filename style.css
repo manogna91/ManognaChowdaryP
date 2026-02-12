@@ -1,128 +1,44 @@
-/* Clean, professional font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
-    color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-}
-
-/* 1. Minimal Navigation */
-nav {
-    padding: 2rem 0;
-    border-bottom: 1px solid #eaeaea;
-}
-
-.nav-container {
-    max-width: 1000px;
+    color: #333;
+    max-width: 800px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
+    padding: 40px 20px;
+    background-color: #f4f7f9;
 }
 
-.logo {
-    font-weight: 700;
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 { color: #2c3e50; margin-bottom: 0; }
+.subtitle { color: #3498db; font-weight: bold; margin-top: 5px; }
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+h2 { border-bottom: 2px solid #3498db; padding-bottom: 5px; color: #2c3e50; }
+
+.project-item { margin-bottom: 15px; }
+.skills-tags { font-weight: bold; color: #2980b9; letter-spacing: 1px; }
+
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
-    color: #000;
-    letter-spacing: -1px;
-    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
+.btn:hover { background: #2980b9; }
 
-.nav-links a {
-    text-decoration: none;
-    color: #666;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover {
-    color: #000;
-}
-
-/* 2. Stark Hero Section */
-.hero {
-    max-width: 1000px;
-    margin: 80px auto;
-    padding: 0 2rem;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #000;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    color: #666;
-    max-width: 600px;
-}
-
-/* 3. Clean Project List (No boxes, just clean rows) */
-.container {
-    max-width: 1000px;
-    margin: 0 auto 100px;
-    padding: 0 2rem;
-}
-
-.section-title {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #999;
-    margin-bottom: 2rem;
-    display: block;
-}
-
-.project-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 2rem 0;
-    border-top: 1px solid #eaeaea;
-    transition: background 0.2s;
-}
-
-.project-row:hover {
-    background: #fafafa;
-}
-
-.project-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.project-info p {
-    color: #666;
-    max-width: 500px;
-}
-
-.project-tech {
-    font-family: monospace;
-    font-size: 0.8rem;
-    color: #0070f3; /* Clear, professional blue */
-    margin-top: 10px;
-}
-
-.view-link {
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-    font-size: 0.9rem;
-    border-bottom: 2px solid #000;
-}
+footer { text-align: center; font-size: 0.8rem; color: #7f8c8d; }
