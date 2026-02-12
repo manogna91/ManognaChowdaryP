@@ -1,5 +1,13 @@
-/* Import a professional font */
+/* Import clean, professional fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #0f172a;    /* Deep Slate */
+    --accent: #2563eb;     /* Professional Blue */
+    --text: #334155;
+    --light-bg: #f8fafc;
+    --border: #e2e8f0;
+}
 
 * {
     margin: 0;
@@ -8,23 +16,22 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background-color: #fcfcfc;
-    color: #334155;
-    line-height: 1.8;
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    color: var(--text);
+    line-height: 1.7;
 }
 
-/* 1. Header Area */
+/* 1. Header & Intro Section */
 header {
-    background-color: #0f172a; /* Sophisticated Dark Slate */
-    color: #f8fafc;
+    background-color: var(--primary);
+    color: white;
     padding: 80px 20px;
     text-align: center;
-    border-bottom: 4px solid #3b82f6; /* Accent blue */
 }
 
 header h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: -1px;
     margin-bottom: 10px;
@@ -33,74 +40,127 @@ header h1 {
 header p {
     font-size: 1.1rem;
     color: #94a3b8;
-    font-weight: 300;
+    margin-bottom: 25px;
 }
 
-/* 2. Content Layout */
-section {
+.social-links {
+    margin-bottom: 25px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+.resume-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* 2. Content Container */
+.container {
     max-width: 800px;
-    margin: 40px auto;
+    margin: 60px auto;
     padding: 0 20px;
 }
 
+section {
+    margin-bottom: 60px;
+}
+
 h2 {
-    font-size: 1.4rem;
-    color: #0f172a;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+}
+
+/* 3. Technical Stack Styling */
+.skills-list {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 8px;
+    list-style: none;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+.skills-list strong {
+    color: var(--primary);
+}
+
+/* 4. Project Cards (Vertical Stack) */
+.project-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 8px;
 }
 
-/* 3. Projects List (Modernizing your <ul>) */
-ul {
-    list-style: none; /* Removes boring bullets */
+.project-card h3 {
+    font-size: 1.4rem;
+    margin: 5px 0 15px 0;
+    color: var(--primary);
 }
 
-ul li {
-    background: white;
-    margin-bottom: 15px;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    transition: all 0.2s ease;
-}
-
-ul li:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-ul li strong {
-    color: #1e293b;
-    display: block;
-    font-size: 1.1rem;
-}
-
-/* 4. Skills Section */
-section:last-of-type p {
-    font-family: 'Courier New', Courier, monospace; /* Makes skills look like code tags */
+.project-tech {
+    font-family: monospace;
+    font-size: 0.85rem;
     background: #f1f5f9;
-    padding: 15px;
+    padding: 4px 8px;
     border-radius: 4px;
-    color: #2563eb;
-    font-weight: bold;
-    text-align: center;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.view-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
 /* 5. Footer */
 footer {
     text-align: center;
-    padding: 40px 0;
-    margin-top: 60px;
-    background: #f8fafc;
-    color: #64748b;
-    font-size: 0.9rem;
-}
-
-footer p a {
-    color: #3b82f6;
-    text-decoration: none;
-    font-weight: 600;
+    padding: 40px;
+    border-top: 1px solid var(--border);
+    color: #94a3b8;
+    font-size: 0.8rem;
 }
