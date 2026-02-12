@@ -1,44 +1,106 @@
+/* Import a professional font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: #f4f7f9;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #fcfcfc;
+    color: #334155;
+    line-height: 1.8;
 }
 
+/* 1. Header Area */
 header {
+    background-color: #0f172a; /* Sophisticated Dark Slate */
+    color: #f8fafc;
+    padding: 80px 20px;
     text-align: center;
-    margin-bottom: 50px;
+    border-bottom: 4px solid #3b82f6; /* Accent blue */
 }
 
-h1 { color: #2c3e50; margin-bottom: 0; }
-.subtitle { color: #3498db; font-weight: bold; margin-top: 5px; }
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
 
+header p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-weight: 300;
+}
+
+/* 2. Content Layout */
 section {
-    background: white;
-    padding: 25px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+/* 3. Projects List (Modernizing your <ul>) */
+ul {
+    list-style: none; /* Removes boring bullets */
+}
+
+ul li {
+    background: white;
+    margin-bottom: 15px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
 }
 
-h2 { border-bottom: 2px solid #3498db; padding-bottom: 5px; color: #2c3e50; }
+ul li:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
 
-.project-item { margin-bottom: 15px; }
-.skills-tags { font-weight: bold; color: #2980b9; letter-spacing: 1px; }
+ul li strong {
+    color: #1e293b;
+    display: block;
+    font-size: 1.1rem;
+}
 
-.btn {
-    display: inline-block;
-    background: #3498db;
-    color: white;
-    padding: 10px 20px;
+/* 4. Skills Section */
+section:last-of-type p {
+    font-family: 'Courier New', Courier, monospace; /* Makes skills look like code tags */
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 4px;
+    color: #2563eb;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 5. Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+footer p a {
+    color: #3b82f6;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
+    font-weight: 600;
 }
-
-.btn:hover { background: #2980b9; }
-
-footer { text-align: center; font-size: 0.8rem; color: #7f8c8d; }
