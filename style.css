@@ -1,43 +1,147 @@
-/* Core Styles */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+/* 1. Global Variables & Reset */
+:root {
+    --primary: #1e293b;    /* Dark Slate */
+    --accent: #4f46e5;     /* Indigo Blue */
+    --bg: #f8fafc;         /* Light Gray/Blue */
+    --white: #ffffff;
+    --text-dark: #0f172a;
+    --text-light: #64748b;
 }
 
-/* Navigation Bar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 2. Professional Navigation */
 nav {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background: var(--white);
+    padding: 1rem 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: -1px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-}
-
-.nav-links li {
-    margin: 0 15px;
+    gap: 30px;
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-/* Hero Section */
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* 3. Hero / Header Section */
 .hero {
     text-align: center;
-    padding: 50px 20px;
-    background: white;
+    padding: 100px 20px;
+    background: var(--white);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 4. Layout Containers */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* 5. Grid Layout (For Projects & Certs) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.tag {
+    display: inline-block;
+    background: #eef2ff;
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* 6. Buttons */
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
 }
